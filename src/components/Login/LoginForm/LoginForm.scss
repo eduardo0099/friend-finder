@@ -1,0 +1,55 @@
+
+@import './../../../styles/variables.scss';
+
+.container-login-form{
+    width: 45%;
+    background-color:white;
+    border-radius: 10px;
+    height: 400px;
+    padding: 60px 5%;
+    .title{
+        font-size: 25px;
+        margin-bottom: 12px;
+        color: $blue;
+    }
+    .sub-title{
+        color: $gray-letter;
+        margin-bottom: 15px;
+    }
+}
+
+.login-form{
+    input{
+        display: block;
+        width: 100%;
+        border-radius: 20px;
+        outline: 0;
+        border: 1px solid $gray2;
+        color: $gray-letter;
+        height: 40px;
+        margin-bottom: 10px;
+        padding-left: 15px;
+        font-size: 16px;
+    }
+
+    button{
+        color:$gray;
+        border: none;
+        border-radius: 20px;
+        background-color: $blue;
+        width: 120px;
+        height: 38px;
+        margin-top: 40px;
+        outline: 0;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: $blue2;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-login-form{
+        width: 100%
+    }
+}

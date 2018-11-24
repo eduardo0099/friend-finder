@@ -1,0 +1,36 @@
+.foreground{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+}
+.background{
+    position: absolute;
+    background-image: url('./../../assets/img/bg.jpg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.container{
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+.layout{
+    width: 90%;
+    margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .layout{
+        width: 70%;
+        margin: auto;
+    }
+}

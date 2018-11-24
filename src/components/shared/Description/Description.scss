@@ -1,0 +1,35 @@
+@import './../../../styles/variables.scss';
+
+.container-description{
+    width: 45%;
+    .title{
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: $gray;
+    }
+    .content{
+        color:$gray;
+        line-height: 1.8;
+        font-size: 1rem;
+    }
+    button{
+        color:$gray;
+        border: none;
+        border-radius: 20px;
+        background-color: $blue;
+        width: 160px;
+        height: 38px;
+        margin-top: 40px;
+        outline: 0;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: $blue2;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-description{
+        width: 100%
+    }
+}
