@@ -19,6 +19,7 @@ class Login extends Component {
                     </div>
                     
                 </div>
+                <div className="filter-background"/>
                 <div className="background"/>
             </div>
         );

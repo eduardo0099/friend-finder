@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './Navbar.scss';
+import './PublicNavbar.scss';
 import blankLogo from './../../../assets/img/logo.png';
 
 class PublicNavbar extends Component {
