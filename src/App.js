@@ -3,13 +3,15 @@ import './styles/App.scss';
 import Loading from './../src/components/shared/Loading';
 import Login from './components/Login';
 import Register from './components/Register';
+import Timeline from './components/Timeline';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         {/*<Loading/>*/}
-        <Register></Register>
+        {/*<Login/>*/}
+        <Timeline/>
       </div>
     );
   }

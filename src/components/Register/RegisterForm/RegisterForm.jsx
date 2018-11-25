@@ -9,11 +9,11 @@ class RegisterForm extends Component {
                 <div className="title">Register Now!!!</div>
                 <div className="sub-title">Be cool and join today. Meet millions</div>
                 <form className="register-form" action="">
-                    <input type="text" className="input-name" placeholder="First Name"/>
-                    <input type="text" className="input-name" placeholder="Last Name"/>
-                    <input type="email" placeholder="Your Email"/>
-                    <input type="password" placeholder="Password"/>
-                    <input type="password" placeholder="Confirm password"/>
+                    <input type="text" className="input-name" placeholder="First Name" spellCheck="false"/>
+                    <input type="text" className="input-name" placeholder="Last Name" spellCheck="false"/>
+                    <input type="email" placeholder="Your Email" spellCheck="false"/>
+                    <input type="password" placeholder="Password" spellCheck="false"/>
+                    <input type="password" placeholder="Confirm password" spellCheck="false"/>
                     <button>Register Now</button>
                 </form>
             </div>

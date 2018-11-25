@@ -9,8 +9,8 @@ class LoginForm extends Component {
                 <div className="title">Login</div>
                 <div className="sub-title">Log into your account</div>
                 <form className="login-form" action="">
-                    <input type="email" placeholder="Your Email"/>
-                    <input type="text" placeholder="Password"/>
+                    <input type="email" placeholder="Your Email" spellCheck="false"/>
+                    <input type="text" placeholder="Password" spellCheck="false"/>
                     <button>Login Now</button>
                 </form>
 

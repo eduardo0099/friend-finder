@@ -1,0 +1,12 @@
+@import './../../styles/variables.scss';
+
+.container-timeline{
+    width: 90%;
+    margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .container-timeline{
+        width: 60%;
+    }
+}
