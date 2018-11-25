@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import PrivateNavbar from '../shared/PrivateNavbar';
 import HeaderTimeline from './HeaderTimeline';
 import './Timeline.scss';
+import ListCard from './ListCard';
 
 class Timeline extends Component {
     render() {
@@ -11,6 +12,7 @@ class Timeline extends Component {
                 <PrivateNavbar/>
                 <div className="container-timeline">
                     <HeaderTimeline/>
+                    <ListCard/>
                 </div>
                 
             </div>

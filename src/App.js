@@ -10,8 +10,8 @@ class App extends Component {
     return (
       <div className="App">
         {/*<Loading/>*/}
-        {/*<Login/>*/}
-        <Timeline/>
+    {/*<Login/>*/}
+        {<Timeline/>}
       </div>
     );
   }

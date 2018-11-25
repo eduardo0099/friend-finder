@@ -1,0 +1,97 @@
+@import './../../../styles/variables.scss';
+
+.card{
+    width: 68%;
+    color: $gray-letter;
+    font-size: 0.8rem;
+    background-color: $gray;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    .main-img{
+        width: 100%;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    .table-post{
+        width: 100%;
+        tbody tr td:nth-child(1){
+            width: 60px;
+            padding: 5px 5px 5px 15px;
+        }
+        tbody tr td:nth-child(2){
+            div{
+                display: inline-block;
+                width: 50%;
+            }
+        }
+    }
+    .text-card{
+        color: $gray-letter2;
+        line-height: 1.6;
+        text-align: justify;
+        border-top: 1px solid $gray2;
+        border-bottom: 1px solid $gray2;
+        padding: 5px 10px;
+        margin: 0 10px;
+    }
+}
+
+.profile-img{
+    width: 100%;
+    border-radius: 50%;
+    width: 40px;
+}
+
+.author-post{
+    div{
+        display: block !important;
+        width: 100% !important;
+        margin-left: 10px;
+    }
+    div:nth-child(1){
+        color: $blue;
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 10px;
+        padding-top: 13px;
+    }
+    div:nth-child(2){
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+}
+.fa-thumbs-up{
+    color:$green;
+    margin: 0 0.4rem;
+    cursor: pointer;
+}
+.fa-thumbs-down{
+    color:$red;
+    margin: 0 0.4rem;
+    cursor: pointer;
+}
+.likes{
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    margin-left: 2px;
+}
+.popularity{
+    text-align: right;
+    padding-right: 10px;
+}
+.actions-card{
+    margin-right: 10px;
+    text-align: right;
+    width: calc(100% - 10px) !important;
+    .action{
+        color: $blue;
+        font-size: 13px;
+        margin-bottom: 15px;
+        padding-top: 5px;
+        width: 70px !important;
+        cursor: pointer;
+    }
+    .action:hover{
+        font-weight: bold;
+    }
+}

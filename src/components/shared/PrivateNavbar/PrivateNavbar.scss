@@ -1,9 +1,11 @@
 @import './../../../styles/variables.scss';
 
 $whiteAlfa: rgba(255, 255, 255, 0.7);
-$heightNavBar: 50px;
+$heightNavBar: 35px;
 
 .navbar {
+    position: fixed;
+    width: 100vw;
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -25,12 +27,17 @@ $heightNavBar: 50px;
 .nav-links {
     text-decoration: none;
     color: $gray;
+    outline: none;
+    font-size: 14px;
 }
 
 .navbar-burger {
     cursor: pointer;
     color: $gray;
-    font-size: 24px;
+    font-size: 16px;
+}
+.logo{
+    width: 110px;
 }
 @media screen and (max-width: 768px) {
     .main-nav div{
@@ -41,7 +48,7 @@ $heightNavBar: 50px;
     .main-nav.active{
         display: block;
         position: absolute;
-        top: 50px;
+        top: $heightNavBar;
         left: 50%;
         text-align: center;
         transform: translateX(-50%);
@@ -83,6 +90,7 @@ $heightNavBar: 50px;
 
     .nav-links {
         margin-left: 40px;
+        outline: none;
     }
 
     .navbar-burger {

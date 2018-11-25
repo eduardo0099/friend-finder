@@ -10,6 +10,8 @@ $heightNavBar: 83px;
     height: $heightNavBar;
     justify-content: space-between;
     flex-direction: row-reverse;
+    top: 0;
+    left: 0;
 }
 
 .main-nav {
@@ -23,12 +25,19 @@ $heightNavBar: 83px;
 .nav-links {
     text-decoration: none;
     color: $gray;
+    outline: none;
 }
 
 .navbar-burger {
     cursor: pointer;
     color: $gray;
     font-size: 24px;
+}
+.logo{
+    width: 110px;
+}
+.background-transp{
+    background-color: transparent !important; 
 }
 @media screen and (max-width: 768px) {
     .main-nav div{
@@ -80,6 +89,7 @@ $heightNavBar: 83px;
 
     .nav-links {
         margin-left: 40px;
+        outline: none;
     }
 
     .navbar-burger {

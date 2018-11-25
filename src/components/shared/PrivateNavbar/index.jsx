@@ -25,12 +25,12 @@ class PrivateNavbar extends Component {
                 </div>
 
                 <div>
-                    <img src={blankLogo}/>
+                    <img className="logo" src={blankLogo}/>
                 </div>
 
                 <div className={openMenu ? "main-nav active" : "main-nav"}>
                     <div>
-                        <a href="#" className="nav-links">Logout</a>
+                        <a href="#" className="nav-links">Log out</a>
                     </div>
                 </div>
             </div>

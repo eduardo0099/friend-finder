@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './HeaderTimeline.scss';
-import photo1 from './../../../assets/img/photo1.jpg';
-import profile from './../../../assets/img/profile.jpg';
-
+import photo1 from './../../../assets/img/cover1.jpg';
+import profile from './../../../assets/img/author1.jpg';
 class HeaderTimeline extends Component {
     render() {
         return (
             <div className="header-profile">
                 {/*<img className="cover" src={photo1} alt="header-profile"/>*/}
-                <div className="cover"  style={{backgroundImage: `url(${photo1})`}}/>
+                <div className="cover"  style={{backgroundImage: `url(${photo1})`,backgroundSize:'cover'}}/>
                 <div className="container-profile">
                     <div className="profile-info">
                         <img className="profile-img" src={profile} alt="profile"/>

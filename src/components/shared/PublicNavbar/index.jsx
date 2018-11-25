@@ -18,21 +18,21 @@ class PublicNavbar extends Component {
     render() {
         let {openMenu} = this.state;
         return (
-            <div className="navbar">
+            <div className="background-transp navbar">
             
                 <div className="navbar-burger">
                     <i className="fas fa-bars" onClick={this.handleOpenMenu}></i>
                 </div>
 
                 <div>
-                    <img src={blankLogo}/>
+                    <img className="logo" src={blankLogo}/>
                 </div>
 
                 <div className={openMenu ? "main-nav active" : "main-nav"}>
-                    <div>
-                        <a href="#" className="nav-links">Register</a>
+                    <div className="background-transp">
+                        <a href="#" className="nav-links ">Register</a>
                     </div>
-                    <div>
+                    <div className="background-transp">
                         <a href="#" className="nav-links">Login</a>
                     </div>
                 </div>
