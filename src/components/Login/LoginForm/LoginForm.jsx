@@ -10,6 +10,8 @@ class LoginForm extends Component {
             isAuth: false,
             email: "",
             password: "",
+            wrongAuthentication: false,
+            message: "",
         }
     }
     componentWillMount(){
@@ -29,13 +31,33 @@ class LoginForm extends Component {
         e.preventDefault();
         let {users} = this.props;
         let {email, password} = this.state;
-        console.log("log>",email,password);
-
-        for (let [idUser, infoUser] of Object.entries(users)) {
-            if(infoUser.email === email && infoUser.password === password){
-                localStorage.setItem('userId',idUser);
-                this.setState({isAuth:true});
+        let registeredUser = false;
+        if(email.length > 0 && password.length >0){
+            if(password.length >= 7){
+                for (let [idUser, infoUser] of Object.entries(users)) {
+                    if(infoUser.email === email && infoUser.password === password){
+                        localStorage.setItem('userId',idUser);
+                        this.setState({isAuth:true});
+                        registeredUser = true;
+                    }
+                }
+                if(!registeredUser){
+                    this.setState({wrongAuthentication:true,message:"Email or password incorrect!!!"});
+                    setTimeout(()=>{
+                        this.setState({wrongAuthentication:false,message:""});
+                    },4000);
+                }
+            }else{
+                this.setState({wrongAuthentication:true,message:"Your password must be have at least 7 characters long"});
+                setTimeout(()=>{
+                    this.setState({wrongAuthentication:false,message:""});
+                },4000);
             }
+        }else{
+            this.setState({wrongAuthentication:true,message:"Please, complete all the fields"});
+            setTimeout(()=>{
+                this.setState({wrongAuthentication:false,message:""});
+            },4000);
         }
     }
     isLoggedIn = () => {
@@ -52,7 +74,7 @@ class LoginForm extends Component {
         }
     }
     render() {
-        let {email, password} = this.state;
+        let {email, password,wrongAuthentication,message} = this.state;
 
         if(this.isLoggedIn()){
             return(
@@ -70,6 +92,7 @@ class LoginForm extends Component {
                 <form className="login-form" onSubmit={this.handleSubmit}>
                     <input type="email" placeholder="Your Email" value={email} onChange={this.handleEmailChange} spellCheck="false"/>
                     <input type="password" placeholder="Password" value={password} onChange={this.handlePasswordChange} spellCheck="false"/>
+                    {wrongAuthentication ? <div style={{color:'red'}}>{message}</div> : ''}
                     <button type="submit">Login Now</button>
                 </form>
             </div>
