@@ -5,7 +5,6 @@ import PublicNavbar from '../shared/PublicNavbar';
 import Description from '../shared/Description';
 import RegisterForm from './RegisterForm/RegisterForm';
 
-
 class Login extends Component {
     render() {
         return (
