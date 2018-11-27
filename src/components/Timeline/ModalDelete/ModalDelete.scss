@@ -1,0 +1,49 @@
+@import './../../../styles/variables.scss';
+
+.modal{
+    background-color: #f1f2f2;
+    position: fixed;
+    width: 300px;
+    height: 150px;
+    left: calc(50% - 150px);
+    top: calc(50% - 75px);
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #d9dcdc;
+    color: #616363;
+    font-weight: bold;
+    font-size: 18px;
+}
+.background-modal{
+    background-color: rgba(116, 116, 116, 0.3);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.content-modal{
+    text-align: center;
+    margin-top: 20px;
+    div{
+        margin-top: 35px;
+    }
+}
+
+.btt-modal{
+    color: $gray;
+    border: none;
+    border-radius: 20px;
+    background-color: #27aae1;
+    width: 90px;
+    font-size: 14px;
+    height: 28px;
+    margin: 7px 15px;
+    outline: 0;
+    cursor: pointer;
+}
+.btt-modal:hover{
+    background-color: $blue2;
+}

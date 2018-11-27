@@ -1,32 +1,59 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Card from '../Card';
 import './ListCard.scss';
+import { connect } from "react-redux";
+import * as actions from "../../../actions";
 
 class ListCard extends Component {
-    
-    render() {
-        let prueba1 = {
-            urlImgCard: "card1",
-            likes: 13,
-            dislikes: 2,
-            urlImgAuthor: "author1",
-            nameAuthor: "Sarah Cruiz",
-            time: new Date(),
-            contentCard: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non leo ut felis viverra dignissim. Aenean a gravida sem. Sed velit quam, eleifend nec magna non, luctus tempus ante. Sed quis dapibus sapien, sed venenatis ipsum. Cras quis risus gravida mi volutpat bibendum vel vel nibh. Duis eu mollis augue. ",
+    constructor(props) {
+        super(props);
+        
+    }
+
+    componentDidMount(){
+        this.props.fetchPosts();
+    }
+
+    getAllCards(){
+        let arrCards = [];
+        if(this.props.posts){
+            for (let [key, value] of Object.entries(this.props.posts)) {
+                let objCard = {
+                    id: key,
+                    content: value.content,
+                    createDate: new Date(value.createDate),
+                    dislikes: JSON.parse(value.dislikes),
+                    likes: JSON.parse(value.likes),
+                    ownerId: value.ownerId,
+                    ownerName: value.ownerName,
+                    ownerPhoto: value.ownerPhoto,
+                    photoCard: value.photoCard,    
+                }
+                arrCards.unshift(
+                    <Card key={key}
+                        {...objCard}
+                    />
+                )
+            }
         }
+        return arrCards;
+    }
+    render() {
+
+        let listCards = this.getAllCards();
+
         return (
             <div className="list-cards">
-                <Card {...prueba1}/>
-                <Card {...prueba1}/>
-                <Card {...prueba1}/>
+                {listCards}
             </div>
         );
     }
 }
 
-ListCard.propTypes = {
-
+const mapStateToProps = ({posts,users}) => {
+    return {
+        posts
+    };
 };
 
-export default ListCard;
+export default connect(mapStateToProps, actions)(ListCard);

@@ -95,3 +95,14 @@
         font-weight: bold;
     }
 }
+.content-textarea{
+    width: 96%;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    resize: none;
+    outline: none;
+    color: $gray-letter;
+    height: 125px;
+    padding: 7px;
+    border-color: $gray2;
+}

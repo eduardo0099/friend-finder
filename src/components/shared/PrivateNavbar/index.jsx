@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import './PrivateNavbar.scss';
 import blankLogo from './../../../assets/img/logo.png';
 
@@ -8,12 +7,17 @@ class PrivateNavbar extends Component {
         super(props);
         this.state={
             openMenu: false,
+            
         }
     }
     handleOpenMenu = () =>{
         this.setState({
             openMenu: !this.state.openMenu,
         });
+    }
+    handleLogOut = () =>{
+        localStorage.removeItem('userId');
+        window.location.reload();
     }
     render() {
         let {openMenu} = this.state;
@@ -30,7 +34,7 @@ class PrivateNavbar extends Component {
 
                 <div className={openMenu ? "main-nav active" : "main-nav"}>
                     <div>
-                        <a href="#" className="nav-links">Log out</a>
+                        <div className="nav-links" onClick={this.handleLogOut}>Log out</div>
                     </div>
                 </div>
             </div>

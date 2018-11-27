@@ -8,13 +8,13 @@ class LoginForm extends Component {
         super(props);
         this.state ={
             isAuth: false,
-            email: "",
-            password: "",
+            email: "eduardo.gamarra@pucp.pe",
+            password: "1234567",
             wrongAuthentication: false,
             message: "",
         }
     }
-    componentWillMount(){
+    componentDidMount(){
         this.props.fetchUsers();
     }
     handleEmailChange = (e) => {
@@ -34,7 +34,9 @@ class LoginForm extends Component {
         let registeredUser = false;
         if(email.length > 0 && password.length >0){
             if(password.length >= 7){
-                for (let [idUser, infoUser] of Object.entries(users)) {
+                for (let [key, value] of Object.entries(users)) {
+                    let idUser = key;
+                    let infoUser = value;
                     if(infoUser.email === email && infoUser.password === password){
                         localStorage.setItem('userId',idUser);
                         this.setState({isAuth:true});
