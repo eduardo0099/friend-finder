@@ -30,10 +30,10 @@ class PublicNavbar extends Component {
 
                 <div className={openMenu ? "main-nav active" : "main-nav"}>
                     <div className="background-transp">
-                        <Link to="/register" className="nav-links">Register</Link>
+                        <Link to="/register" className="nav-links border-links">Register</Link>
                     </div>
                     <div className="background-transp">
-                        <Link to="/" className="nav-links">Login</Link>
+                        <Link to="/" className="nav-links border-links">Login</Link>
                     </div>
                 </div>
             </div>

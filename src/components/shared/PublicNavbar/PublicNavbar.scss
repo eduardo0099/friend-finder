@@ -43,8 +43,12 @@ $heightNavBar: 83px;
     .main-nav div{
         display: none;
     }
-}
-@media screen and (max-width: 768px) {
+    .border-links{
+        border: 1px solid $gray;
+        border-radius: 20px;
+        width: 12rem;
+        height: 30px;
+    }
     .main-nav.active{
         display: block;
         position: absolute;
