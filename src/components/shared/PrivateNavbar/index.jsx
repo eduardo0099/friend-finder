@@ -33,9 +33,9 @@ class PrivateNavbar extends Component {
                 </div>
 
                 <div className={openMenu ? "main-nav active" : "main-nav"}>
-                    <div>
+                    
                         <div className="nav-links" onClick={this.handleLogOut}>Log out</div>
-                    </div>
+                    
                 </div>
             </div>
         );
