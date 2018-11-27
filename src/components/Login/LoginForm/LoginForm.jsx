@@ -8,8 +8,8 @@ class LoginForm extends Component {
         super(props);
         this.state ={
             isAuth: false,
-            email: "eduardo.gamarra@pucp.pe",
-            password: "1234567",
+            email: "",
+            password: "",
             wrongAuthentication: false,
             message: "",
         }
